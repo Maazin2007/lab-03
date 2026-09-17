@@ -21,7 +21,7 @@ fun CityListScreen(
 ) {
     LazyColumn(modifier = modifier) {
         itemsIndexed(cities) { index, city ->
-            CityRow(city = city)
+            CityRow(city = city, modifier = Modifier)
 
             if (index < cities.lastIndex) {
                 HorizontalDivider()
@@ -31,9 +31,9 @@ fun CityListScreen(
 }
 
 @Composable
-fun CityRow(city: City) {
+fun CityRow(city: City, modifier: Modifier = Modifier) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp, vertical = 16.dp)
     ) {

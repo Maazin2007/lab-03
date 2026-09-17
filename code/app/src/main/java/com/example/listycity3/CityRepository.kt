@@ -16,4 +16,14 @@ class CityRepository {
         _cities.add(city)
     }
 
+    // update City on a index
+    fun updateCity(index: Int, updatedCity: City) {
+        // if the index is less than 0 or greater than the size of the list we return
+        if (index < 0 || index >= _cities.size) {
+            return
+        }
+        // updating the city at the given index
+        _cities[index] = updatedCity
+    }
+
 }
